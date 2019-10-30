@@ -1,20 +1,19 @@
 #include <stdio.h>
 int main()
 {
-    int n, reversedInteger = 0, remainder, originalInteger;
+    int n, rev = 0, rem, Integer;
     printf("Enter an integer: ");
     scanf("%d", &n);
-    originalInteger = n;
+    Integer = n;
     while( n!=0 )
     {
-        remainder = n%10;
-        reversedInteger = reversedInteger*10 + remainder;
-        n /= 10;
+        rem = n%10;
+        rev = rev*10 + rem;
+        n =n/10;
     }
-    if (originalInteger == reversedInteger)
-        printf("%d is a palindrome.", originalInteger);
+    if (Integer == rev)
+        printf("%d is a palindrome.",Integer);
     else
-        printf("%d is not a palindrome.", originalInteger);
-    
+        printf("%d is not a palindrome.",Integer);
     return 0;
 }
